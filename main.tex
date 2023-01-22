@@ -1,0 +1,171 @@
+\documentclass{article}
+
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[english]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with `a4paper' for UK/EU standard size
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\title{Internet of Things Architecture of Telecommunications Management Network}
+\author{Dharani Srinivas}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+The Internet of Things is a technological revolution that represents the future of computing and communications. It has the features of both the Internet and the Telecommunications Network, and also has its own distinguishing feature. The current accepted three-layer structure of the Internet of things can't express the whole features and connotation of the internet of things.
+Keywords-Internet of Things; architecture; five-layer; Internet; Telecommunications
+\end{abstract}
+
+\section{INTRODUCTION}
+
+The loT describes an emerging global, Internet-based information service architecture. It is based on data communication tools, primarily RFIO-tagged items (Radio Frequency Identification). The loT might also serve as backbone for ubiquitous computing enabling smart environments to recognize and identify objects, and retrieve information from the Internet to facilitate their adaptive functionality.
+
+
+\section{CURRENT ARCHITECTURE OF IOT}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.9\textwidth]{Intro.png}
+\caption{\label{fig:frog}3 Level Architecture of IOT}
+\end{figure}
+
+
+
+\subsection{The Perception Layer}
+
+The Perception Layer is like the facial skin and the five sense organs of loT, which is mainly identifying objects, gathering information. The Perception Layer includes 2-D bar code labels and readers, RFID tags and reader-writers, camera, GPS, sensors, terminals, and sensor network. Its main task is to identify the object, gathering information.
+
+\subsection{The network layer}
+
+The network layer is like the neural network and brain of loT, its main function is transmitting and processing information. The network layer includes a convergence network of communication and Internet network, network management center, information center and intelligent processing center, etc. The network layer will transmit and process the information obtained from perception layer.
+
+
+
+\subsection{The Application Layer}
+
+The Application Layer is the deep convergence of loT and industray technology, combined with industry needs to realize the intellectualized industry. It is similar to person's social division of labor, eventually from human society. From this point, it is more similar to the communication network, because both of them need to be controled and operated.
+
+
+
+\section{ARCHITECTURE OF INTERNET AND TELECOMMUNICATIONS MANAGEMENT NETWORK}
+\subsection{TCP/IP Model Layer}
+
+The TCP/IP (Transmission Control Protocol Internet Protocol) model uses four layers that logically span the equivalent of the top six layers of the OSI (Open System Interconnect) reference model. The TCP/IP model does not address the physical layer, which is where hardware devices reside. The next three layers-network interface, internet and (host-to-host) transport-correspond to layers 2, 3 and 4 of the OSI model. The TCP/IP application layer conceptually "blurs" the top three OSI layers 
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.9\textwidth]{OSI.png}
+\caption{\label{fig:frog}OSI Reference Model and TCPIIP Model Layers}
+\end{figure}
+
+
+  \subsubsection{1. Internet Layer}
+
+This layer corresponds to the network layer in the OSI Reference Model (and for that reason is sometimes called the
+1 We choose TCP/IP model to describe the Internet architecture. Network layer even in TCP/IP model discussions). It is responsible for typical layer three jobs, such as logical device addressing, data packaging, manipulation and delivery, and last but not least, routing. At this layer we find the Internet Protocol (IP), arguably the heart of TCP/IP, as well as support protocols such as Internet Control Message Protocol (ICMP) and the routing protocols (RIP, OSFP, BOP, etc.) The new version of IP, called IP version 6, will be used for the Internet of the future and is of course also at this layer.
+
+ \subsubsection{2. Transport Layer}
+
+ This primary job of this layer is to facilitate end-to-end communication over an internetwork. It is in charge of allowing logical connections to be made between devices to allow data to be sent either unreliably (with no guarantee that it gets there) or reliably (where the protocol keeps track of the data sent and received to make sure it arrives, and re­ sends it if necessary). It is also here that identification of the specific source and destination application process is accomplished. The key TCP/IP protocols at this layer are the Transmission Control Protocol (TCP) and User Datagram Protocol (UDP). The TCP/IP transport layer corresponds to the layer of the same name in the OSI model (layer four) but includes certain elements that are arguably part of the OSI session layer. For example, TCP establishes a connection that can persist for a long period of time, which some people say makes a TCP connection more like a session.
+
+
+\subsubsection{3. Application Layer}
+
+This is the highest layer in the TCP/IP model. It is a rather broad layer, encompassing layers five through seven in the OSI model. The TCP/IP model better reflects the "blurry" nature of the divisions between the functions of the higher layers in the OSI model, which in practical terms often seem rather arbitrary. It really is hard to separate some protocols in terms of which of layers five, six or seven they encompass.
+Numerous protocols reside at the application layer. These include application protocols such as HTTP, FTP and SMTP for providing end-user services, as well as administrative protocols like SNMP, DHCP and DNS.
+
+
+
+\subsection{TMN Logical Layered Architecture within the TMN functional archhitecture}
+
+To deal with the complexity of telecommunications management, management functionality may be considered to be partitioned into logical layers. The Logical Layered Architecture (LLA) is a concept for the structuring of management functionality which organizes the functions into groupings called "logical layers" and describes the relationship between layers. A logical layer reflects particular aspects of management arranged by different levels of abstraction.[5] Figure 3 shows the Suggested model for layering of TMN management functions.
+\subsubsection{1. Element management layer}
+
+The element management layer manages each network element on an individual or group basis and supports an abstraction of the functions provided by the network element layer.The element management layer has one or more element OSFs (Operations Systems Function) that are individually responsible, on a devolved basis from the network management layer, for some subset of network element functions. The element management layer has the following three principal roles:
+a) Control and coordination of a subset of network elements on an individual NEF (Network Element Function) basis.
+b) The element management layer may also control and coordinate a subset of network elements on collective basis.
+c) Maintaining statistical, log and other data about elements within its scope of control.
+
+\subsubsection{2. Network management layer}
+
+The network management layer has the responsibility for the management of a network as supported by the element management layer.At this layer, functions addressing the management of a wide geographical area are located. Complete visibility of the whole network is typical and, as an objective, a technology independent view will be provided to the service management layer.
+The network management layer has the following five principal roles:
+a) The control and coordination of the network view of all network elements within its scope or domain.
+b) The provision, cessation or modification of network capabilities for the support of service to customers.
+c) The maintenance of network capabilities.
+d) Maintaining statistical, log and other data about the network and interact with the service manager layer on performance, usage, availability, etc.
+e) The network OSFs may manage the relationships (e.g. connectivity) between NEFs.
+
+\subsubsection{3. Service management layer}
+
+Service management is concerned with, and responsible for, the contractual aspects of services that are being provided to customers or available to potential new customers. Some of the main functions of this layer are service order handling, complaint handling and invoicing.
+The service management layer has the following four principal roles:
+a) Customer facing and interfacing with other PTOs (Public Telecommunications Operators); 
+b) Interaction with service providers;
+c) Maintaining statistical data (e.g. QOS);
+d) Interaction between services.
+Customer facing provides the basic point of contact with
+customers for all service transactions including provision/cessation of service, accounts, QOS, fault reporting, etc.The Service Management layer is responsible for all negotiations and resulting contractual agreements between a (potential) customer and the service(s) offered to this customer.
+
+\subsubsection{4. Business management layer}
+
+The business management layer has responsibility for the total enterprise. The business management layer comprises proprietary functionality. The business management layer is included in the TMN architecture to facilitate the specification of capability that it requires of the other management layers. This layer is part of the overall management of the enterprise and many interactions are necessary with other management systems.
+
+The business management layer has the following four principal roles:
+
+a) Supporting the decision-making process for the optimal investment and use of new
+telecommunications resources;
+
+b) Supporting the management of OA & M related budget;
+
+c) Supporting the supply and demand of OA&M related manpower
+
+d) Maintaining Aggregate Data about the total enterprise. 
+
+\section{A NEW ARCHITECTURE OF lOT}
+
+As the Internet of Things is different from Internet and Telecommunications Network, the above two models is not suitable for loT directly. But they have some similar feature in common. So through the technology architecture of the Internet and the logical structure of Telecommunications Management Network, and combined with the specific features of the Internet of Things, we established a new architecture of loT. We believe that this architecture would better explain the features and connotation of the Internet of Things. We divided loT into 5 layers, which are the Business Layer, the Application Layer, the Processing Layer, the Transport Layer and the Perception Layer.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\textwidth]{New.png}
+\caption{\label{fig:frog}A New Architecture of IOT}
+\end{figure}
+
+\subsection{The Perception Layer}
+
+The main task of the Perception Layer is to perceive the physical properties of objects (such as temperature, location etc.) by various sensors (such as infrared sensors, RFID, 2-D barcode), and convert these informations to digital signals which is more convenient for network transmission. The various sensors and equipments in the Perception Layer are like the "Network Element" in Telecommunications Management Network. The key techniques in this layer are sensing technology, RFID technology (including labels and literacy), 2-D barcode, GPS, etc. Therefore, the main function of the Perception Layer is to collect informations and transform to digital signals.
+Meanwhile, many objects can not be perceived directly, so we need implant microchip into their bodies. These chips can sense the temperature, speed and so on, and even process these information. This involves the nanotechnology which makes the chips small enough to be implanted into every object, even sand. So the nanotechnology and embedded intelligence technology also are key technology in the Perception Layer.
+
+\subsection{The Transport Layer}
+
+The Transport Layer, or called the Network Layer, is responsible for transmiting data received from the Perception Layer to the processing center through various network, such as wireless or cable network, even the enterprise Local Area Network (LAN). The main techniques in this layer include FTTx, 3G, Wifi, bluetooth, Zigbee, UMB, infrared technology and so on. So the main function of transport layer is transport. At this layer, we can find many protocols, like IPv6 (Internet Protocol version 6), which is necessary for addressing billions of things.
+The Internet of Things will be an inmense network, which not only connects billions of things, but also encompass huge amounts of various networks. Therefore, the communication between different networks and entities is very crucial.
+
+\subsection{The Processing Layer}
+
+The Processing Layer mainly store, analyse and process
+the informations of objects received from the transport layer. We specially extract this new layer from others, because we think, due to the large quantities of things and the huge informations they carried, it is very important and difficulty to store and process these massdata. Main techniques include database, intelligent processing, cloud computing, ubiquitous computing, etc. Cloud computing and ubiquitous computing is the primary technology in this layer; in future there even may appear new computing technology which is more suitable for the Internet of Things. For this reason, we consider that the research and development on the Processing Layer is significant for the future development of Internet of Things.
+
+\subsection{The Application Layer}
+
+The task of the Application Layer is based on the data processed in the Process Layer, and develops diverse applications of the Internet of Things, such as intelligent
+transportation, logistics management, identity authentication, location based service (LBS), and safety, etc. The function of this layer is providing all kinds of applications for each industry. Because the various applications promote the development of the Internet of Things, this layer plays an important role in pushing the Internet of Things to a large scale development.
+
+\subsection{The Business Layer}
+
+The Business Layer is like a manager of the Internet of Things, including managing the applications, the relevant business model and other business. The Business Layer not only manages the release and charging of various applications, but also the research on business model and profit model. As we all known, success of a technology not only depends on the priority on technology, but also the innovation and reasonable of business model. Based on this piont, the Internet of Things can not have effective and long­ term development without the research on business model. Meanwhile, this layer should manage the users' privacy which is equally important in the Internet of Things.
+
+\section{CONCLUSIONS}
+
+We think the existing three-layer structure has certain significance to understand technical architecture of the Internet of Things at the initial stage of its development, but it cannot completely explain its structure and the connotation. Just because of this, many scholars have different opinions on the difinition and scope of the Internet of Things. We hope that this five-layer architecture can help scholars and developers to better understand the Internet of Things.
+
+
+\end{document}
